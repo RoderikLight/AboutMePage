@@ -19,4 +19,14 @@ class ContentController extends Controller
     {
         return view('content.card3');
     }
+
+    public function card4Content()
+    {
+        return view('content.card4');
+    }
+
+    public function card5Content()
+    {
+        return view('content.card5');
+    }
 }

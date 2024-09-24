@@ -16,15 +16,11 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark bg-primary shadow-sm" style="height: 60px;">
             <div class="container d-flex align-items-center">
-                <a class="navbar-brand">
-                    <img src="{{ asset('res/pnglogooutline.png') }}" alt="Company Logo" class="img-fluid logo-left" style="max-height: 200px;">
-                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -38,7 +34,7 @@
                         </li>
                     </ul>
                 </div>
-                <ul class="navbar-nav ms-auto border border-dark p-3">
+                <!-- <ul class="navbar-nav ms-auto border border-dark p-3">
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle text-black" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ __('Language') }}
@@ -52,13 +48,18 @@
                                 {{ __('Spanish') }}
                             </a>
                         </div>
-                    </li>
-                </ul>
+                    </li> 
+                </ul> -->
         </nav>
 
         <main class="py-4">
             @yield('content')
         </main>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    @yield('scripts')
 </body>
 </html>

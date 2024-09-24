@@ -44,6 +44,15 @@ body {
     background-color: lighten($secondary, 5%);
     color: $text-color !important;
   }
+
+  .card.custom-card {
+    height: 88vh;
+  }
+  
+  .card.custom-card .card-body {
+    height: calc(100% - 56px); // Adjust based on header height
+    overflow-y: auto;
+  }
   
   .card-header {
     background-color: darken($primary, 5%) !important;
@@ -74,9 +83,4 @@ body {
     }
     }
 
-.logo-left {
-    position: absolute;
-    top: 0;
-    left: 0;
-    max-height: 200px;
-  }
+    
