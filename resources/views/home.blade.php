@@ -77,38 +77,16 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(response => response.text())
             .then(data => {
                 document.getElementById('dynamic-content').innerHTML = data;
-            })
-            .catch(error => console.error('Error fetching content:', error));
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-    console.log('DOM fully loaded and parsed'); // Debugging log
-
-    document.getElementById('card5-button').addEventListener('click', function () {
-        fetchContent('/content/card5');
-    });
-
-    function fetchContent(url) {
-        fetch(url)
-            .then(response => response.text())
-            .then(data => {
-                console.log('Fetched content:', data); // Debugging log
-                document.getElementById('dynamic-content').innerHTML = data;
-                executeCard5Script(); // Execute the script after loading content
+                executeCard5Script(); // Ejecutar el script después de cargar el contenido
             })
             .catch(error => console.error('Error fetching content:', error));
     }
 
     function executeCard5Script() {
-        console.log('Executing card5 script'); // Debugging log
-
         const form = document.getElementById('survey-form');
         if (form) {
             form.addEventListener('submit', function(event) {
                 event.preventDefault(); // Prevent the default form submission
-                console.log('Form submission intercepted'); // Debugging log
-
-                alert('Form submission intercepted'); // Alert to freeze the process
 
                 const formData = new FormData(this);
                 const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
@@ -128,7 +106,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     return response.json();
                 })
                 .then(data => {
-                    console.log('Success:', data);
                     alert(data.message);
                     form.reset();
                 })
@@ -138,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             });
         } else {
-            console.error('Form not found'); // Debugging log
+            console.error('Form not found'); 
         }
     }
 });
