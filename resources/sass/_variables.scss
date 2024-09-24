@@ -1,0 +1,86 @@
+// variables.scss
+
+// Custom Colors
+$primary: #423C5B; // Toned-down Purple
+$secondary: #040405; // Darker background
+$tertiary: #D8D2E7; // Muted Pinkish Purple
+$fourth: #14111B; // Muted Coral
+$body-bg: $fourth;
+$text-color: #FEFEFE; // Lighter grey text for better visibility
+
+// Bootstrap Variables
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "dark": $secondary,
+  "light": #f8f9fa,
+  "info": #17a2b8,
+  "success": #28a745,
+  "warning": #ffc107,
+  "danger": #dc3545,
+);
+
+body {
+    background-color: $fourth;
+    color: $text-color;
+    font-family: 'Aldrich', 'Nunito', sans-serif !important;
+  }
+  
+  .btn-outline-primary {
+    border-color: $primary !important;
+    color: $text-color !important;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: $primary !important;
+    color: $text-color !important;
+  }
+  
+  .border-left {
+    border-left: 2px solid $primary !important;
+  }
+  
+  .card {
+    background-color: lighten($secondary, 5%);
+    color: $text-color !important;
+  }
+
+  .card.custom-card {
+    height: 88vh;
+  }
+  
+  .card.custom-card .card-body {
+    height: calc(100% - 56px); // Adjust based on header height
+    overflow-y: auto;
+  }
+  
+  .card-header {
+    background-color: darken($primary, 5%) !important;
+    color: $text-color !important;
+  }
+  
+  .card-body {
+    background-color: lighten($secondary, 5%);
+    color: $text-color !important;
+  }
+  
+  .bg-primary {
+    background-color: $primary !important;
+  }
+  
+  .text-white {
+    color: $text-color !important;
+  }
+  
+
+  .navbar {
+    background: linear-gradient(45deg, $primary, $tertiary) !important;
+    .navbar-brand img {
+      max-height: 100px;
+    }
+    .nav-item img {
+      max-height: 100px;
+    }
+    }
+
+    
